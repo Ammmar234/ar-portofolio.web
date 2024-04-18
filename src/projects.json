@@ -1,0 +1,19 @@
+[
+  {
+    "id": 1,
+    "src": "../../../public/images/restaurant.png",
+    "title": "Restaurant project ",
+    "subtitle": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, minus?  ",
+    "github": "",
+    "link": ""
+  },
+
+  {
+    "id": 2,
+    "src":"/dist/images/restaurant.png",
+    "title": "Restaurant project ",
+    "subtitle": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nat's, minus?",
+    "github": "",
+    "link": ""
+  }
+]

@@ -1,0 +1,129 @@
+/*
+left container 
+*/
+main.flex{
+    align-items : start;
+}
+main.flex .left-container {
+    display : flex;
+    flex-direction : column ;
+    gap: .5rem;
+    margin : 1rem;
+    text-transform: capitalize;
+}
+main.flex .left-container button  {
+    all: unset;
+    background : rgb(37,37,40);
+    width : 7rem ;
+    font-size : 1rem;
+    padding : .6rem ;
+    text-align : center ;
+    letter-spacing: 1px;
+    border-radius : .3rem;
+    opacity : .7;
+    border : 1px solid var(--border);
+
+}
+main.flex .left-container button.active {
+    border : 1px solid  var(--blue)   ;
+    scale:1.07;
+    opacity: 1; 
+    font-weight : 600 ;
+
+}
+main.flex .left-container button:hover  {
+    opacity : 1;
+
+}
+/*
+right container 
+*/
+main.flex .right-container {
+    flex-grow: 1 ;
+   flex-wrap : wrap;
+   gap:10px;
+   justify-content : center ;
+}
+main.flex .right-container article {
+    border : 1px solid  var(--blue);
+    border-radius : .5rem;
+    background : linear-gradient(90deg ,rgba(255,255,255,.1) , rgba(0,0,0,.1));
+    box-sizing: border-box;
+    padding : .3rem ;
+    width : 260px;
+    height : 300px ;
+    transition : .3s all;
+
+
+}
+main.flex .right-container article:hover  {
+    rotate : -3deg;
+
+}
+main.flex .right-container article img {
+    width : 250px;
+    border-radius : .4rem ;
+    height :150px;
+    box-sizing: border-box;
+
+
+}
+main.flex .right-container article .box  {
+    width: 250px ;
+
+}
+main.flex .right-container article .box  .title   {
+    color : var(--tittle);
+    padding : .3rem 0;
+    text-align : center ;
+
+
+}
+main.flex .right-container article .box  .subtitle   {
+    color : var(--subtitle)
+
+}
+main.flex .right-container article .links   {
+    justify-content : space-between;
+    padding : .4rem;
+    
+
+}
+main.flex .right-container article .links .icons  {
+    gap :1.6rem ;
+}
+main.flex .right-container article .links .icons a  {
+    font-size : 1.4rem;
+    color : var(--subtitle ) ;
+
+}
+main.flex .right-container article .links .more-link  {
+    color : var(--blue);
+    display : flex;
+    align-items : center ;
+    transition: all .5s;
+
+}
+main.flex .right-container article .links .more-link:hover   {
+    border-bottom: 1px solid var(--blue );
+
+}
+
+@media (max-width : 600px ) {
+    main.flex{
+        flex-direction :column;
+        align-items :center ;
+    }
+    main.flex .left-container {
+        flex-direction : row;
+        flex-wrap:wrap;
+        justify-content : center ;
+
+    }
+    main.flex .left-container button  {
+        width :5rem;
+        font-size : .7rem;
+
+    }
+
+}

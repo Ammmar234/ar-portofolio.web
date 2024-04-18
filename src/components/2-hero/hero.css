@@ -1,0 +1,45 @@
+section.hero {
+  margin: 2rem;
+}
+section .left-section .logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+section .left-section {
+  padding: 1.4rem;
+}
+section .left-section {
+  flex-grow: 1;
+}
+.left-section .tittle {
+  color: var(--tittle);
+}
+section .left-section .subtitle {
+  color: var(--subtitle);
+}
+section .left-section .links  {
+  justify-content : space-around  ;
+  width : 7rem  ;
+  padding : .7rem;
+
+}
+section .left-section .links a  {
+  color : var(--subtitle);
+  transition-duration: .5s;
+}
+section .left-section .links a:hover  {
+  color : var(--tittle) ;
+  scale : 1.05;
+
+}
+
+
+@media (max-width: 700px) {
+  section .left-section {
+    flex-grow: 0;
+  }
+  section .right-section {
+    display: none;
+  }
+}
