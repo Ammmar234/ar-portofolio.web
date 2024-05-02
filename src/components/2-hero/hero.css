@@ -1,45 +1,75 @@
+/* ===========================
+ table of contents
+==============================
+1. Left Section
+2. Right Section ==> animation*/
+
 section.hero {
-  margin: 2rem;
+  margin-top: 3rem;
 }
-section .left-section .logo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+
+/* ========================
+    1. Left Section
+=========================== */
+section.hero .parent-avatar.flex {
+  align-items: end;
+  gap: 0.6rem;
 }
-section .left-section {
-  padding: 1.4rem;
-}
-section .left-section {
+
+section.hero .left-section {
   flex-grow: 1;
 }
-.left-section .tittle {
-  color: var(--tittle);
+
+section.hero .icon-verified {
+  color: var(--blue);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
 }
-section .left-section .subtitle {
+
+section.hero .avatar {
+  width: 88px;
+  border-radius: 50%;
+  border: 1px solid darkorange;
+  padding: 1px;
+  box-shadow: 2px 2px 40px rgba(203, 200, 200, 0.586) inset;
+}
+
+section.hero h1.title {
+  font-size: 2.85rem;
+  line-height: 3.3rem;
+  margin: 24px 0;
+  color: var(--title);
+}
+
+section.hero p.sub-title {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  line-height: 1.65rem;
+  margin-bottom: 32px;
+}
+
+section.hero .all-icons {
+  font-size: 1.3rem;
+  gap: 1.5rem;
   color: var(--subtitle);
 }
-section .left-section .links  {
-  justify-content : space-around  ;
-  width : 7rem  ;
-  padding : .7rem;
 
-}
-section .left-section .links a  {
-  color : var(--subtitle);
-  transition-duration: .5s;
-}
-section .left-section .links a:hover  {
-  color : var(--tittle) ;
-  scale : 1.05;
-
+section.hero .all-icons .icon:hover {
+  font-size: 1.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+  color: var(--icon-hover);
 }
 
-
-@media (max-width: 700px) {
-  section .left-section {
-    flex-grow: 0;
-  }
-  section .right-section {
+/* ===================================
+    2. Right Section ==> animation
+====================================== */
+.right-section.animation {
+  width: 200px;
+  translate: 20px 20px;
+}
+@media (max-width: 600px) {
+  section.hero .right-section {
     display: none;
   }
 }

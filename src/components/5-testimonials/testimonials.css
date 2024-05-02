@@ -1,0 +1,22 @@
+.testimonials img{
+    width : 200px;
+    border: 1px solid var(--blue);
+    border-radius : 4px;
+    margin : 1.2rem ;
+
+}
+h2{
+    text-align : center ;
+    text-transform: capitalize;
+}
+.testimonials .img-container {
+    display : flex ;
+    flex-direction : column;
+    justify-content : center ;
+    align-items : center ;
+}
+.testimonials .img-container .subtitle {
+    margin : 1rem;
+    color : var(--subtitle)
+
+}

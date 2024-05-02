@@ -1,27 +1,35 @@
-import React from "react";
 import "./hero.css";
-export default function Hero() {
+import Lottie from "lottie-react"
+import done from "../../../public/animation/done.json"
+const Hero = () => {
   return (
-    <section className="hero flex ">
+    <section className="hero flex" id = "about">
       <div className="left-section  ">
-        <img src="/public/images/logo.jpeg" alt="" className="logo" />
-        <h1 className="tittle">
-          Ammar Al Tayyeb , front-end developer 
+        <div className="parent-avatar flex">
+          <img src="./me.png" className="avatar" alt="" />
+          <div className="icon-verified"></div>
+        </div>
 
+        <h1 className="title">
+          web developer & copywriter 
         </h1>
-        <p className="subtitle">
-          Lorem ipsum dolor, sit amat consectetur adipisicing edit. Praesentium recusandae odit illo labore? Enim, porro laudantium. Quae reiciendis quam distinctio?
+        <p className="sub-title">
+          I’m Ammar-Al-Tayyeb , a web developer since 2022 
         </p>
-        <ul className="links flex  ">
-          <li><a className = "icon-facebook2"  href=""> </a></li>
-          <li><a className = "icon-x" href=""></a></li>
-          <li><a className = "icon-github-square" href=""></a></li>
-          <li><a className = "icon-instagram" href=""></a></li>
-          
 
-        </ul>
+        <div className="all-icons flex">
+          <div className="icon icon-twitter"></div>
+          <div className="icon icon-instagram"></div>
+          <div className="icon icon-github"></div>
+          <div className="icon icon-linkedin"></div>
+        </div>
       </div>
-      <div className="right-section">animation </div>
+
+      <div className="right-section animation">
+        <Lottie animationData={done}></Lottie>
+      </div>
     </section>
   );
-}
+};
+
+export default Hero;

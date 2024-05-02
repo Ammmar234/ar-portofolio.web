@@ -1,73 +1,93 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import "./header.css";
-export default function Header() {
-  const [showModel, setShowModel] = useState(false);
-  const handleShowModel = () => {
-    setShowModel(!showModel);
-  };
 
+const Header = () => {
+  const [showModal, setshowModal] = useState(false);
+  const [theme, setTheme] = useState("dark");
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else if (theme === "dark") {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+  }, [theme]);
   return (
-    <>
-      <header className="flex ">
-        <button
-          onClick={() => {
-            handleShowModel();
-          }}
-          className="menu icon-menu"
-        ></button>
-        <div></div>
-        <nav className="">
-          <ul className="flex">
+    <header className="  flex" id="header">
+      <button
+        onClick={() => {
+          setshowModal(true);
+        }}
+        className="menu icon-menu flex"
+      >
+        {" "}
+      </button>
+      <div />
+
+      <nav>
+        <ul className="flex">
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#projects">projects</a>
+          </li>
+          <li>
+            <a href="#contact">contact us</a>
+          </li>
+          <li>
+            <a href="#testimonials">certifications</a>
+          </li>
+          <li>
+            <a href="#footer">footer</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button
+        className="mode flex"
+        onClick={() => {
+          theme === "dark" ? setTheme("light") : setTheme("dark");
+        }}
+      >
+        <span className={theme === "light" ? "icon-sun" : "icon-moon-o"}>
+          {" "}
+        </span>
+      </button>
+
+      {showModal && (
+        <div className="fixed">
+          <ul className="modal ">
             <li>
-              <a href="">About</a>
+              <button
+                className="icon-close"
+                onClick={() => {
+                  setshowModal(false);
+                }}
+              />
             </li>
             <li>
-              <a href="">Projects </a>
+              <a href="#about">About</a>
             </li>
             <li>
-              <a href="">Contact </a>
+              <a href="#projects">Projects</a>
             </li>
             <li>
-              <a href="">Testimonials</a>
+              <a href="#contact">contact us</a>
             </li>
             <li>
-              <a href="">Certifications</a>
+              <a href="#testimonials">certifications</a>
+            </li>
+            <li>
+              <a href="#footer">footer</a>
             </li>
           </ul>
-        </nav>
-        <button className="dark-mode">
-          <span className="icon-moon-o "></span>
-        </button>
-        {showModel && (
-          <div className="fixed">
-            <ul className="model ">
-              <li className ="" >
-                <button
-                  onClick={() => {
-                    handleShowModel();
-                  }}
-                  className="icon-log-out "
-                ></button>
-              </li>
-              <li>
-                <a href="">About</a>
-              </li>
-              <li>
-                <a href="">Projects</a>
-              </li>
-              <li>
-                <a href="">Contact </a>
-              </li>
-              <li>
-                <a href="">Testimonials </a>
-              </li>
-              <li>
-                <a href="">Certifications</a>
-              </li>
-            </ul>
-          </div>
-        )}
-      </header>
-    </>
+        </div>
+      )}
+    </header>
   );
-}
+};
+
+export default Header;
